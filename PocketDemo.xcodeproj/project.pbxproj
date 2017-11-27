@@ -18,6 +18,7 @@
 		04F9D3B91FCCCE13003915C9 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3B81FCCCE13003915C9 /* BaseOperation.swift */; };
 		04F9D3BB1FCCCE41003915C9 /* TransactionParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */; };
 		04F9D3BD1FCCCE5E003915C9 /* TransactionPostOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3BC1FCCCE5E003915C9 /* TransactionPostOperation.swift */; };
+		04F9D3C01FCCD135003915C9 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3BF1FCCD135003915C9 /* TransactionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		04F9D3B81FCCCE13003915C9 /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionParseOperation.swift; sourceTree = "<group>"; };
 		04F9D3BC1FCCCE5E003915C9 /* TransactionPostOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPostOperation.swift; sourceTree = "<group>"; };
+		04F9D3BF1FCCD135003915C9 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		04F9D3B11FCCC912003915C9 /* DUBER */ = {
 			isa = PBXGroup;
 			children = (
+				04F9D3BE1FCCD11F003915C9 /* Models */,
 				04F9D3B51FCCCD4E003915C9 /* Services */,
 				04F9D3B21FCCC920003915C9 /* Resources */,
 				04F9D3B01FCCC8FE003915C9 /* ViewControllers */,
@@ -183,6 +186,14 @@
 				04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		04F9D3BE1FCCD11F003915C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D3BF1FCCD135003915C9 /* TransactionModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F9D3C01FCCD135003915C9 /* TransactionModel.swift in Sources */,
 				04F9D3BB1FCCCE41003915C9 /* TransactionParseOperation.swift in Sources */,
 				04F9D3B71FCCCDFE003915C9 /* TransactionGetOperation.swift in Sources */,
 				04F9D3851FCCC735003915C9 /* ViewController.swift in Sources */,
