@@ -14,6 +14,10 @@
 		04F9D38D1FCCC735003915C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D38B1FCCC735003915C9 /* LaunchScreen.storyboard */; };
 		04F9D3981FCCC735003915C9 /* PocketDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3971FCCC735003915C9 /* PocketDemoTests.swift */; };
 		04F9D3A31FCCC735003915C9 /* PocketDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3A21FCCC735003915C9 /* PocketDemoUITests.swift */; };
+		04F9D3B71FCCCDFE003915C9 /* TransactionGetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3B61FCCCDFE003915C9 /* TransactionGetOperation.swift */; };
+		04F9D3B91FCCCE13003915C9 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3B81FCCCE13003915C9 /* BaseOperation.swift */; };
+		04F9D3BB1FCCCE41003915C9 /* TransactionParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */; };
+		04F9D3BD1FCCCE5E003915C9 /* TransactionPostOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3BC1FCCCE5E003915C9 /* TransactionPostOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		04F9D39E1FCCC735003915C9 /* PocketDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F9D3A21FCCC735003915C9 /* PocketDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketDemoUITests.swift; sourceTree = "<group>"; };
 		04F9D3A41FCCC735003915C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F9D3B61FCCCDFE003915C9 /* TransactionGetOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionGetOperation.swift; sourceTree = "<group>"; };
+		04F9D3B81FCCCE13003915C9 /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionParseOperation.swift; sourceTree = "<group>"; };
+		04F9D3BC1FCCCE5E003915C9 /* TransactionPostOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPostOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +105,8 @@
 		04F9D3811FCCC735003915C9 /* PocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04F9D3B11FCCC912003915C9 /* DUBER */,
 				04F9D3821FCCC735003915C9 /* AppDelegate.swift */,
-				04F9D3841FCCC735003915C9 /* ViewController.swift */,
-				04F9D3861FCCC735003915C9 /* Main.storyboard */,
-				04F9D3891FCCC735003915C9 /* Assets.xcassets */,
-				04F9D38B1FCCC735003915C9 /* LaunchScreen.storyboard */,
 				04F9D38E1FCCC735003915C9 /* Info.plist */,
 			);
 			path = PocketDemo;
@@ -123,6 +128,61 @@
 				04F9D3A41FCCC735003915C9 /* Info.plist */,
 			);
 			path = PocketDemoUITests;
+			sourceTree = "<group>";
+		};
+		04F9D3B01FCCC8FE003915C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D3841FCCC735003915C9 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04F9D3B11FCCC912003915C9 /* DUBER */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D3B51FCCCD4E003915C9 /* Services */,
+				04F9D3B21FCCC920003915C9 /* Resources */,
+				04F9D3B01FCCC8FE003915C9 /* ViewControllers */,
+			);
+			path = DUBER;
+			sourceTree = "<group>";
+		};
+		04F9D3B21FCCC920003915C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D3B41FCCC93E003915C9 /* Images */,
+				04F9D3B31FCCC934003915C9 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04F9D3B31FCCC934003915C9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D3861FCCC735003915C9 /* Main.storyboard */,
+				04F9D38B1FCCC735003915C9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04F9D3B41FCCC93E003915C9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D3891FCCC735003915C9 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		04F9D3B51FCCCD4E003915C9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D3B81FCCCE13003915C9 /* BaseOperation.swift */,
+				04F9D3B61FCCCDFE003915C9 /* TransactionGetOperation.swift */,
+				04F9D3BC1FCCCE5E003915C9 /* TransactionPostOperation.swift */,
+				04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +319,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F9D3BB1FCCCE41003915C9 /* TransactionParseOperation.swift in Sources */,
+				04F9D3B71FCCCDFE003915C9 /* TransactionGetOperation.swift in Sources */,
 				04F9D3851FCCC735003915C9 /* ViewController.swift in Sources */,
+				04F9D3B91FCCCE13003915C9 /* BaseOperation.swift in Sources */,
+				04F9D3BD1FCCCE5E003915C9 /* TransactionPostOperation.swift in Sources */,
 				04F9D3831FCCC735003915C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -427,13 +491,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CNCUVC9ZYR;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				INFOPLIST_FILE = PocketDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PocketNetwork.PocketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -442,13 +506,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CNCUVC9ZYR;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				INFOPLIST_FILE = PocketDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PocketNetwork.PocketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
