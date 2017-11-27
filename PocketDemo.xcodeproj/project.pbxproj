@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04F9D3831FCCC735003915C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3821FCCC735003915C9 /* AppDelegate.swift */; };
-		04F9D3851FCCC735003915C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3841FCCC735003915C9 /* ViewController.swift */; };
 		04F9D3881FCCC735003915C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D3861FCCC735003915C9 /* Main.storyboard */; };
 		04F9D38A1FCCC735003915C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D3891FCCC735003915C9 /* Assets.xcassets */; };
 		04F9D38D1FCCC735003915C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D38B1FCCC735003915C9 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,9 @@
 		04F9D3B91FCCCE13003915C9 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3B81FCCCE13003915C9 /* BaseOperation.swift */; };
 		04F9D3BB1FCCCE41003915C9 /* TransactionParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */; };
 		04F9D3BD1FCCCE5E003915C9 /* TransactionPostOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3BC1FCCCE5E003915C9 /* TransactionPostOperation.swift */; };
+		D2945EA91FCCD64C00F12230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2945EA81FCCD64C00F12230 /* LoginViewController.swift */; };
+		D2945EAB1FCCD68500F12230 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2945EAA1FCCD68500F12230 /* MainViewController.swift */; };
+		D2945EAD1FCCD72800F12230 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2945EAC1FCCD72800F12230 /* InvoiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 /* Begin PBXFileReference section */
 		04F9D37F1FCCC735003915C9 /* PocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F9D3821FCCC735003915C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04F9D3841FCCC735003915C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04F9D3871FCCC735003915C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F9D3891FCCC735003915C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F9D38C1FCCC735003915C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +56,9 @@
 		04F9D3B81FCCCE13003915C9 /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		04F9D3BA1FCCCE41003915C9 /* TransactionParseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionParseOperation.swift; sourceTree = "<group>"; };
 		04F9D3BC1FCCCE5E003915C9 /* TransactionPostOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPostOperation.swift; sourceTree = "<group>"; };
+		D2945EA81FCCD64C00F12230 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2945EAA1FCCD68500F12230 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D2945EAC1FCCD72800F12230 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +137,9 @@
 		04F9D3B01FCCC8FE003915C9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				04F9D3841FCCC735003915C9 /* ViewController.swift */,
+				D2945EA81FCCD64C00F12230 /* LoginViewController.swift */,
+				D2945EAA1FCCD68500F12230 /* MainViewController.swift */,
+				D2945EAC1FCCD72800F12230 /* InvoiceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -319,9 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2945EAB1FCCD68500F12230 /* MainViewController.swift in Sources */,
+				D2945EA91FCCD64C00F12230 /* LoginViewController.swift in Sources */,
+				D2945EAD1FCCD72800F12230 /* InvoiceViewController.swift in Sources */,
 				04F9D3BB1FCCCE41003915C9 /* TransactionParseOperation.swift in Sources */,
 				04F9D3B71FCCCDFE003915C9 /* TransactionGetOperation.swift in Sources */,
-				04F9D3851FCCC735003915C9 /* ViewController.swift in Sources */,
 				04F9D3B91FCCCE13003915C9 /* BaseOperation.swift in Sources */,
 				04F9D3BD1FCCCE5E003915C9 /* TransactionPostOperation.swift in Sources */,
 				04F9D3831FCCC735003915C9 /* AppDelegate.swift in Sources */,
