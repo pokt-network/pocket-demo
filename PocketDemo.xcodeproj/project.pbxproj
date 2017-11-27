@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043C17931FCCDC5800C007C5 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043C17841FCCDC3200C007C5 /* HandyJSON.framework */; };
+		043C17941FCCDC5800C007C5 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 043C17841FCCDC3200C007C5 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04F9D3831FCCC735003915C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3821FCCC735003915C9 /* AppDelegate.swift */; };
 		04F9D3851FCCC735003915C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D3841FCCC735003915C9 /* ViewController.swift */; };
 		04F9D3881FCCC735003915C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D3861FCCC735003915C9 /* Main.storyboard */; };
@@ -22,6 +24,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		043C17831FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21520C441D3341B200F53111;
+			remoteInfo = "HandyJSON iOS";
+		};
+		043C17851FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21520C5B1D3344A900F53111;
+			remoteInfo = HandyJSONDemo;
+		};
+		043C17871FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 217B046D1D571B9F0035A8E2;
+			remoteInfo = "HandyJSON iOS Tests";
+		};
+		043C17891FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0F9B1DA1650E00B3BC12;
+			remoteInfo = "HandyJSON watchOS";
+		};
+		043C178B1FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FB11DA2441E00B3BC12;
+			remoteInfo = "HandyJSON tvOS";
+		};
+		043C178D1FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FB91DA2441E00B3BC12;
+			remoteInfo = "HandyJSON tvOS Tests";
+		};
+		043C178F1FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FE11DA2494F00B3BC12;
+			remoteInfo = "HandyJSON macOS";
+		};
+		043C17911FCCDC3200C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FE91DA2494F00B3BC12;
+			remoteInfo = "HandyJSON macOS Tests";
+		};
+		043C17951FCCDC5800C007C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 21520C431D3341B200F53111;
+			remoteInfo = "HandyJSON iOS";
+		};
 		04F9D3941FCCC735003915C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04F9D3771FCCC735003915C9 /* Project object */;
@@ -38,7 +103,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		043C17971FCCDC5800C007C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				043C17941FCCDC5800C007C5 /* HandyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HandyJSON.xcodeproj; path = ThirdParty/HandyJSON/HandyJSON.xcodeproj; sourceTree = SOURCE_ROOT; };
 		04F9D37F1FCCC735003915C9 /* PocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F9D3821FCCC735003915C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F9D3841FCCC735003915C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043C17931FCCDC5800C007C5 /* HandyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +165,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043C17751FCCDB4F00C007C5 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */,
+			);
+			name = ThirdParty;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		043C17791FCCDC3100C007C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				043C17841FCCDC3200C007C5 /* HandyJSON.framework */,
+				043C17861FCCDC3200C007C5 /* HandyJSONDemo.app */,
+				043C17881FCCDC3200C007C5 /* HandyJSON iOS Tests.xctest */,
+				043C178A1FCCDC3200C007C5 /* HandyJSON.framework */,
+				043C178C1FCCDC3200C007C5 /* HandyJSON.framework */,
+				043C178E1FCCDC3200C007C5 /* HandyJSON tvOS Tests.xctest */,
+				043C17901FCCDC3200C007C5 /* HandyJSON.framework */,
+				043C17921FCCDC3200C007C5 /* HandyJSON macOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		04F9D3761FCCC735003915C9 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +259,7 @@
 		04F9D3B21FCCC920003915C9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				043C17751FCCDB4F00C007C5 /* ThirdParty */,
 				04F9D3B41FCCC93E003915C9 /* Images */,
 				04F9D3B31FCCC934003915C9 /* Storyboards */,
 			);
@@ -206,10 +312,12 @@
 				04F9D37B1FCCC735003915C9 /* Sources */,
 				04F9D37C1FCCC735003915C9 /* Frameworks */,
 				04F9D37D1FCCC735003915C9 /* Resources */,
+				043C17971FCCDC5800C007C5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				043C17961FCCDC5800C007C5 /* PBXTargetDependency */,
 			);
 			name = PocketDemo;
 			productName = PocketDemo;
@@ -289,6 +397,12 @@
 			mainGroup = 04F9D3761FCCC735003915C9;
 			productRefGroup = 04F9D3801FCCC735003915C9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 043C17791FCCDC3100C007C5 /* Products */;
+					ProjectRef = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				04F9D37E1FCCC735003915C9 /* PocketDemo */,
@@ -297,6 +411,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		043C17841FCCDC3200C007C5 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = 043C17831FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043C17861FCCDC3200C007C5 /* HandyJSONDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HandyJSONDemo.app;
+			remoteRef = 043C17851FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043C17881FCCDC3200C007C5 /* HandyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HandyJSON iOS Tests.xctest";
+			remoteRef = 043C17871FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043C178A1FCCDC3200C007C5 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = 043C17891FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043C178C1FCCDC3200C007C5 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = 043C178B1FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043C178E1FCCDC3200C007C5 /* HandyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HandyJSON tvOS Tests.xctest";
+			remoteRef = 043C178D1FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043C17901FCCDC3200C007C5 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = 043C178F1FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043C17921FCCDC3200C007C5 /* HandyJSON macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HandyJSON macOS Tests.xctest";
+			remoteRef = 043C17911FCCDC3200C007C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		04F9D37D1FCCC735003915C9 /* Resources */ = {
@@ -359,6 +532,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		043C17961FCCDC5800C007C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HandyJSON iOS";
+			targetProxy = 043C17951FCCDC5800C007C5 /* PBXContainerItemProxy */;
+		};
 		04F9D3951FCCC735003915C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 04F9D37E1FCCC735003915C9 /* PocketDemo */;
@@ -501,6 +679,7 @@
 		04F9D3A81FCCC735003915C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 379F9842K2;
@@ -516,6 +695,7 @@
 		04F9D3A91FCCC735003915C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 379F9842K2;
