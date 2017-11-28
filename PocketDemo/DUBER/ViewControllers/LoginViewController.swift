@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         password.attributedPlaceholder = NSAttributedString(string: "Password",
                                                             attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         signIn.layer.cornerRadius = signIn.frame.size.height / 2
-        // Do any additional setup after loading the view.
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
