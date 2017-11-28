@@ -10,9 +10,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var username: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        username.attributedPlaceholder = NSAttributedString(string: "Username",
+                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        password.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                            attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         // Do any additional setup after loading the view.
     }
 
