@@ -10,15 +10,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         username.attributedPlaceholder = NSAttributedString(string: "Username",
-                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         password.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                            attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+                                                            attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        signIn.layer.cornerRadius = signIn.frame.size.height / 2
         // Do any additional setup after loading the view.
     }
 
