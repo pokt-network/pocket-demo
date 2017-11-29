@@ -7,4 +7,13 @@
 //
 
 import Foundation
+import HandyJSON
+
+class TransactionModel: HandyJSON {
+    var id: String!
+    var token: String? = "ETH"
+    
+    required init() {}
+}
+
 

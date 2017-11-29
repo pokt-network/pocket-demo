@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let getTransactionsOperation = TransactionGetOperation.init()
+        
+        _ = getTransactionsOperation.GetRequest(url: "https://pkt-node-demo.herokuapp.com", path: "/transactions") { (transactions) in
+            if  transactions.count > 0 {
+                UserDefaults.standard.set(transactions, forKey: "transactions")
+            }else{
+                print("No transactions loaded")
+            }
+        }
+        
+
+        
         return true
     }
 
