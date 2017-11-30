@@ -14,21 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        print("AppDelegate - didFinishLaunchingWithOptions()")
         // Override point for customization after application launch.
         let getTransactionsOperation = TransactionGetOperation.init()
         
         _ = getTransactionsOperation.GetRequest(url: "https://pkt-node-demo.herokuapp.com", path: "/transactions") { (transactions) in
             if  transactions.count > 0 {
                 UserDefaults.standard.set(transactions, forKey: "transactions")
+                print("AppDelegate - didFinishLaunchingWithOptions - Transactions saved to UserDefaults")
             }else{
-                print("No transactions loaded")
+                print("AppDelegate - didFinishLaunchingWithOptions - No transactions loaded")
             }
         }
-        
-
-        
+    
         return true
     }
 

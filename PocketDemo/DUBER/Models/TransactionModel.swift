@@ -7,13 +7,22 @@
 //
 
 import Foundation
-import HandyJSON
 
-class TransactionModel: HandyJSON {
+class TransactionModel: NSObject {
     var id: String!
-    var token: String? = "ETH"
+    var token: String!
     
-    required init() {}
+    func initWith(id: String!, token: String!) -> TransactionModel {
+        self.id = "0x"+id
+        
+        if token == "" {
+            self.token = "ETH"
+        }else{
+            self.token = token
+        }
+        
+        return self
+    }
 }
 
 

@@ -7,17 +7,20 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class TransactionGetOperation: NSObject {
-    typealias CompletionHandler = (_ transactions: [TransactionModel]) -> Void
+//    typealias CompletionHandler = (_ transactions: [TransactionModel]) -> Void
+    typealias CompletionHandler = (_ transactions: NSMutableArray) -> Void
     
-    public func GetRequest(url: String!, path: String!, completionHandler: CompletionHandler) {
+    public func GetRequest(url: String!, path: String!, completionHandler: @escaping CompletionHandler) {
         print("TransactionGetOperation - GetRequest()")
         
-        var request = URLRequest(url: URL(string: url)!)
+        var request = URLRequest(url: URL(string: url + path)!)
         let transactions = NSMutableArray()
-        let parseOperation = TransactionParseOperation.init()
-        var parsedTransactions = [TransactionModel]()
+//        let parseOperation = TransactionParseOperation.init()
+//        var parsedTransactions = [TransactionModel]()
+        var parsedTransactions = NSMutableArray()
         
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -25,28 +28,22 @@ class TransactionGetOperation: NSObject {
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: [JSONSerialization.ReadingOptions.allowFragments])
+                let json = try JSON(data: data!)
                 
-                guard let newValue = json as? [String: Any] else {
-                    print("invalid format")
-                    return
-                }
-                if newValue["transactions"] == nil{
-                    return
-                }
-                let test = newValue["transactions"] as! NSMutableArray
+                let array =  json["transactions"].arrayObject
                 
-                for transactionDict in test {
+                for transactionDict in array! {
                     transactions.add(transactionDict)
                 }
                 
                 if transactions.count > 0 {
                     print("Transactions count: \(transactions.count)")
-                    parsedTransactions = parseOperation.parseGetOperation(array: transactions)
+//                    parsedTransactions = parseOperation.parseGetOperation(array: transactions)
+                    parsedTransactions = transactions
                 }else{
                     print("Transactions count: \(transactions.count), returning...")
                 }
-//                completionHandler(parsedTransactions)
+                completionHandler(parsedTransactions)
                 
             } catch {
                 print("error: \(error)")

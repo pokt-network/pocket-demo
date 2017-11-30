@@ -7,16 +7,18 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class TransactionPostOperation : NSObject {
+    //    typealias CompletionHandler = (_ transactions: [TransactionModel]) -> Void
+    typealias CompletionHandler = (_ transactions: NSDictionary) -> Void
     
-    public func PostRequest(url: String!, path: String!, transaction: TransactionModel ) -> NSDictionary {
+    public func PostRequest(url: String!, path: String!, transaction: TransactionModel, completionHandler: @escaping CompletionHandler ) {
         print("BaseOperation - PostRequest()")
         
         let params = ["token": transaction.token, "transaction": transaction.id ] as! Dictionary<String, String>
-        let dict = NSDictionary()
         
-        var request = URLRequest(url: URL(string: url)!)
+        var request = URLRequest(url: URL(string: url+path)!)
         request.httpMethod = "POST"
         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -24,14 +26,16 @@ class TransactionPostOperation : NSObject {
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
             do {
-                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                print(json)
+                let json = try JSON(data: data!)
+                let dict = json.dictionaryObject! as NSDictionary
+                completionHandler(dict)
+                print(dict.debugDescription)
             } catch {
                 print("error")
             }
         })
         
         task.resume()
-        return dict
+
     }
 }

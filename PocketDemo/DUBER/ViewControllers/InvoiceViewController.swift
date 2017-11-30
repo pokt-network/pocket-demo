@@ -9,7 +9,8 @@
 import UIKit
 
 class InvoiceViewController: UIViewController {
-
+    var signedTransaction: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,38 @@ class InvoiceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func CompleteTripAction(_ sender: Any) {
+        let postOperation = TransactionPostOperation.init()
+        let transaction = TransactionModel.init()
+        var status = ""
+        
+        transaction.id = self.signedTransaction
+        transaction.token = "ETH"
+        
+        postOperation.PostRequest(url: "https://pkt-node-demo.herokuapp.com", path: "/relay", transaction: transaction) { (response) in
+            
+            if response.value(forKey: "isRejected") != nil {
+                status = "Transaction Failed"
+                print(status)
+            }else{
+                status = "Transaction Completed"
+                print(status)
+            }
+            
+            let alertController = UIAlertController(title: status, message: "", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+            
+            // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                (result : UIAlertAction) -> Void in
+                print("OK")
+            }
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
 
+    }
+    
     /*
     // MARK: - Navigation
 

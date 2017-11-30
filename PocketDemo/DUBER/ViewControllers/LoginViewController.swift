@@ -29,7 +29,30 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func signinButtonAction(_ sender: Any) {
+        
+        if self.username.text == "pocket" && self.password.text == "network" {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainViewController = storyboard.instantiateViewController(withIdentifier: "mainViewControllerID")
+            
+            self.navigationController?.present(mainViewController, animated: true, completion: nil)
+            
+        }else {
+            
+            let alertController = UIAlertController(title: "Invalid Login", message: "", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+            
+            // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                (result : UIAlertAction) -> Void in
+                print("OK")
+            }
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
