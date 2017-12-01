@@ -152,6 +152,55 @@
 			remoteGlobalIDString = 04F9D37E1FCCC735003915C9;
 			remoteInfo = PocketDemo;
 		};
+		D29E30C41FD0D1A400166A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		D29E30C61FD0D1A400166A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		D29E30C81FD0D1A400166A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON macOS";
+		};
+		D29E30CA1FD0D1A400166A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON macOS Tests";
+		};
+		D29E30CC1FD0D1A400166A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
+			remoteInfo = "SwiftyJSON watchOS";
+		};
+		D29E30CE1FD0D1A400166A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7236B4F61BAC14150020529B;
+			remoteInfo = "SwiftyJSON tvOS";
+		};
+		D29E30D01FD0D1A400166A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
+			remoteInfo = "SwiftyJSON tvOS Tests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -191,6 +240,7 @@
 		D2945EA81FCCD64C00F12230 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D2945EAA1FCCD68500F12230 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D2945EAC1FCCD72800F12230 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
+		D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "../../../../Downloads/SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +314,7 @@
 				04F9D3961FCCC735003915C9 /* PocketDemoTests */,
 				04F9D3A11FCCC735003915C9 /* PocketDemoUITests */,
 				04F9D3801FCCC735003915C9 /* Products */,
+				D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */,
 				04509F7B1FCEDCFD0014B358 /* SwiftyJSON.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -373,6 +424,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D29E30BA1FD0D1A400166A83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D29E30C51FD0D1A400166A83 /* SwiftyJSON.framework */,
+				D29E30C71FD0D1A400166A83 /* SwiftyJSON iOS Tests.xctest */,
+				D29E30C91FD0D1A400166A83 /* SwiftyJSON.framework */,
+				D29E30CB1FD0D1A400166A83 /* SwiftyJSON macOS Tests.xctest */,
+				D29E30CD1FD0D1A400166A83 /* SwiftyJSON.framework */,
+				D29E30CF1FD0D1A400166A83 /* SwiftyJSON.framework */,
+				D29E30D11FD0D1A400166A83 /* SwiftyJSON tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,6 +537,10 @@
 				{
 					ProductGroup = 043C17791FCCDC3100C007C5 /* Products */;
 					ProjectRef = 043C17781FCCDC3100C007C5 /* HandyJSON.xcodeproj */;
+				},
+				{
+					ProductGroup = D29E30BA1FD0D1A400166A83 /* Products */;
+					ProjectRef = D29E30B91FD0D1A400166A83 /* SwiftyJSON.xcodeproj */;
 				},
 				{
 					ProductGroup = 04509F7C1FCEDCFD0014B358 /* Products */;
@@ -591,6 +660,55 @@
 			fileType = wrapper.cfbundle;
 			path = "SwiftyJSON tvOS Tests.xctest";
 			remoteRef = 04509F991FCEDCFD0014B358 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D29E30C51FD0D1A400166A83 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D29E30C41FD0D1A400166A83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D29E30C71FD0D1A400166A83 /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = D29E30C61FD0D1A400166A83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D29E30C91FD0D1A400166A83 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D29E30C81FD0D1A400166A83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D29E30CB1FD0D1A400166A83 /* SwiftyJSON macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON macOS Tests.xctest";
+			remoteRef = D29E30CA1FD0D1A400166A83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D29E30CD1FD0D1A400166A83 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D29E30CC1FD0D1A400166A83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D29E30CF1FD0D1A400166A83 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D29E30CE1FD0D1A400166A83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D29E30D11FD0D1A400166A83 /* SwiftyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON tvOS Tests.xctest";
+			remoteRef = D29E30D01FD0D1A400166A83 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -807,12 +925,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 379F9842K2;
+				DEVELOPMENT_TEAM = N824D47ZU5;
 				INFOPLIST_FILE = PocketDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PocketNetwork.PocketDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = PocketNetwork.PocketDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -823,12 +943,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 379F9842K2;
+				DEVELOPMENT_TEAM = N824D47ZU5;
 				INFOPLIST_FILE = PocketDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PocketNetwork.PocketDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = PocketNetwork.PocketDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
