@@ -17,20 +17,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         print("AppDelegate - didFinishLaunchingWithOptions()")
         // Override point for customization after application launch.
+        // Inital transaction fetch
+        self.fetchTransactions()
+        
+        return true
+    }
+    
+    public func fetchTransactions() {
+        print("AppDelegate - fetchTransactions()")
+
         let getTransactionsOperation = TransactionGetOperation.init()
         
         _ = getTransactionsOperation.GetRequest(url: "https://pkt-node-demo.herokuapp.com", path: "/transactions") { (transactions) in
+            print("AppDelegate - fetchTransactions() - Transactions GetRequest succeed")
             if  transactions.count > 0 {
                 UserDefaults.standard.set(transactions, forKey: "transactions")
-                print("AppDelegate - didFinishLaunchingWithOptions - Transactions saved to UserDefaults")
+                UserDefaults.standard.set(0, forKey: "index")
+                print("AppDelegate - fetchTransactions() - Transactions saved to UserDefaults")
+                print("AppDelegate - fetchTransactions() - Transactions Index = 0")
+                
+                DispatchQueue.main.async {
+                    if let activeViewController  = self.window?.rootViewController as? MainViewController {
+                        print("AppDelegate - fetchTransactions() - Executing RequestButtonAction to use new fetched data")
+                        activeViewController.RequestButtonAction(self)
+                    }
+                }
+                
             }else{
                 print("AppDelegate - didFinishLaunchingWithOptions - No transactions loaded")
             }
         }
-    
-        return true
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

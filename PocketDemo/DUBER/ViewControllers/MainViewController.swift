@@ -43,14 +43,29 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func RequestButtonAction(_ sender: Any) {
+        print("MainViewController - RequestButtonAction()")
         var signedTransaction = ""
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let invoiceViewController = storyboard.instantiateViewController(withIdentifier: "invoiceViewControllerID") as! InvoiceViewController
+        let index = UserDefaults.standard.integer(forKey: "index")
+        
+        print("MainViewController - RequestButtonAction() - Transaction Index = \(index)")
         
         if let transactionsArray = UserDefaults.standard.array(forKey: "transactions") {
             if transactionsArray.count > 0 {
-                signedTransaction = (transactionsArray.first as? String ?? "")
-            }else{
+                print("MainViewController - RequestButtonAction() - Retrieved Transactions: \(transactionsArray.count)")
+                if index < transactionsArray.count {
+                    signedTransaction = (transactionsArray[index] as? String ?? "")
+                    UserDefaults.standard.set(index + 1, forKey: "index")
+                    
+                    print("MainViewController - RequestButtonAction() - Signed transaction = \(signedTransaction)")
+                    
+                }else {
+                    print("MainViewController - RequestButtonAction() - No more transactions, fetching a new batch")
+                    let appDelegate = AppDelegate.init()
+                    appDelegate.fetchTransactions()
+                }
+            }else {
                 print("MainViewController - viewWillAppear() - 0 Transactions in UserDefaults")
             }
         }else {
