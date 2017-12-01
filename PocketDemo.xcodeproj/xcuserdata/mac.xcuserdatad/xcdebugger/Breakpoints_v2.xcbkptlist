@@ -9,12 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PocketDemo/DUBER/Services/TransactionGetOperation.swift"
-            timestampString = "533516570.805294"
+            filePath = "PocketDemo/DUBER/ViewControllers/MainViewController.swift"
+            timestampString = "533840501.83935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10">
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "RequestButtonAction(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
